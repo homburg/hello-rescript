@@ -7,38 +7,32 @@ var rxFrom = DemoGen.from;
 
 var rxMap = DemoGen.map;
 
-function doIt(stream) {
-  rxMap(function (n) {
-            return (n << 1);
-          })(stream).subscribe(function (prim) {
-        console.log(prim);
-        
-      });
+function testRxJs(param) {
+  var doIt = function (stream) {
+    rxMap(function (n) {
+              return (n << 1);
+            })(stream).subscribe(function (prim) {
+          console.log(prim);
+          
+        });
+    
+  };
+  console.log(rxFrom);
+  console.log(rxMap);
+  console.log(String(rxFrom));
+  console.log(String(rxMap));
+  var stream = rxFrom([
+        1,
+        2,
+        3
+      ]);
+  console.log(stream);
+  console.log(String(doIt));
+  console.log(doIt(stream));
   
 }
 
-console.log(rxFrom);
-
-console.log(rxMap);
-
-console.log(String(rxFrom));
-
-console.log(String(rxMap));
-
-var stream = rxFrom([
-      1,
-      2,
-      3
-    ]);
-
-console.log(stream);
-
-console.log(String(doIt));
-
-console.log(doIt(stream));
-
 exports.rxFrom = rxFrom;
 exports.rxMap = rxMap;
-exports.doIt = doIt;
-exports.stream = stream;
+exports.testRxJs = testRxJs;
 /* rxFrom Not a pure module */
