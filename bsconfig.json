@@ -15,4 +15,13 @@
   "warnings": {
     "error" : "+101"
   },
+  "gentypeconfig": {
+    "language": "typescript",
+    "shims": {},
+    "generatedFileExtension": ".gen.tsx",
+    "debug": {
+      "all": false,
+      "basic": false
+    }
+}
 }

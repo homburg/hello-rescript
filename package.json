@@ -4,7 +4,8 @@
   "scripts": {
     "build": "rescript",
     "clean": "rescript clean -with-deps",
-    "start": "rescript build -w"
+    "build:watch": "rescript build -w",
+    "dev": "node -r esbuild-runner/register src/Demo.bs.js"
   },
   "keywords": [
     "rescript"
@@ -12,6 +13,13 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "rescript": "*"
+    "esbuild-runner": "^2.2.0",
+    "rescript": "*",
+    "rxjs": "^7.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.11",
+    "gentype": "^4.1.0",
+    "prettier": "^2.3.2"
   }
 }
